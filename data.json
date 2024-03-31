@@ -1,0 +1,228 @@
+{
+    "2024-03-30": {
+        "total": {
+            "video": 457,
+            "audio": 256
+        },
+        "Grand total": 713,
+        "AB-Block-1": {
+            "video": 1,
+            "audio": 23
+        },
+        "AB-Block-2": {
+            "video": 233,
+            "audio": 233
+        },
+        "Cellular-Block": {
+            "video": 223,
+            "audio": 0
+        },
+        "HS-Block": {
+            "video": 0,
+            "audio": 0
+        },
+        "A-Class": {
+            "video": 0,
+            "audio": 0
+        },
+        "Quarantine": {
+            "video": 0,
+            "audio": 0
+        },
+        "Hospital": {
+            "video": 0,
+            "audio": 0
+        },
+        "Emulakath": {
+            "video": 0,
+            "audio": 0
+        }
+    },
+    "2024-03-29": {
+        "total": {
+            "video": 0,
+            "audio": 0
+        },
+        "Grand total": 0,
+        "AB-Block-1": {
+            "video": 0,
+            "audio": 0
+        },
+        "AB-Block-2": {
+            "video": 0,
+            "audio": 0
+        },
+        "Cellular-Block": {
+            "video": 0,
+            "audio": 0
+        },
+        "HS-Block": {
+            "video": 0,
+            "audio": 0
+        },
+        "A-Class": {
+            "video": 0,
+            "audio": 0
+        },
+        "Quarantine": {
+            "video": 0,
+            "audio": 0
+        },
+        "Hospital": {
+            "video": 0,
+            "audio": 0
+        }
+    },
+    "2024-03-27": {
+        "total": {
+            "video": 0,
+            "audio": 0
+        },
+        "Grand total": 0,
+        "AB-Block-1": {
+            "video": 0,
+            "audio": 0
+        },
+        "AB-Block-2": {
+            "video": 0,
+            "audio": 0
+        },
+        "Cellular-Block": {
+            "video": 0,
+            "audio": 0
+        },
+        "HS-Block": {
+            "video": 0,
+            "audio": 0
+        },
+        "A-Class": {
+            "video": 0,
+            "audio": 0
+        },
+        "Quarantine": {
+            "video": 0,
+            "audio": 0
+        },
+        "Hospital": {
+            "video": 0,
+            "audio": 0
+        }
+    },
+    "2024-03-01": {
+        "total": {
+            "video": 389,
+            "audio": 97
+        },
+        "Grand total": 486,
+        "AB-Block-1": {
+            "video": 120,
+            "audio": 60
+        },
+        "AB-Block-2": {
+            "video": 240,
+            "audio": 30
+        },
+        "Cellular-Block": {
+            "video": 12,
+            "audio": 0
+        },
+        "HS-Block": {
+            "video": 5,
+            "audio": 2
+        },
+        "A-Class": {
+            "video": 12,
+            "audio": 5
+        },
+        "Quarantine": {
+            "video": 0,
+            "audio": 0
+        },
+        "Hospital": {
+            "video": 0,
+            "audio": 0
+        },
+        "Emulakath": {
+            "video": 0,
+            "audio": 0
+        }
+    },
+    "2024-03-02": {
+        "total": {
+            "video": 289,
+            "audio": 267
+        },
+        "Grand total": 556,
+        "AB-Block-1": {
+            "video": 125,
+            "audio": 20
+        },
+        "AB-Block-2": {
+            "video": 25,
+            "audio": 25
+        },
+        "Cellular-Block": {
+            "video": 122,
+            "audio": 215
+        },
+        "HS-Block": {
+            "video": 5,
+            "audio": 2
+        },
+        "A-Class": {
+            "video": 12,
+            "audio": 5
+        },
+        "Quarantine": {
+            "video": 0,
+            "audio": 0
+        },
+        "Hospital": {
+            "video": 0,
+            "audio": 0
+        },
+        "Emulakath": {
+            "video": 0,
+            "audio": 0
+        }
+    },
+    "2024-03-28": {
+        "total": {
+            "video": 389,
+            "audio": 97
+        },
+        "Grand total": 486,
+        "AB-Block-1": {
+            "video": 120,
+            "audio": 60
+        },
+        "AB-Block-2": {
+            "video": 240,
+            "audio": 30
+        },
+        "Cellular-Block": {
+            "video": 12,
+            "audio": 0
+        },
+        "HS-Block": {
+            "video": 5,
+            "audio": 2
+        },
+        "A-Class": {
+            "video": 12,
+            "audio": 5
+        },
+        "Quarantine": {
+            "video": 0,
+            "audio": 0
+        },
+        "Hospital": {
+            "video": 0,
+            "audio": 0
+        },
+        "Emulakath": {
+            "video": 0,
+            "audio": 0
+        }
+    }
+}
