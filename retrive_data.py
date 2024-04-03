@@ -69,18 +69,48 @@ class RetrieveDataApp(QtWidgets.QWidget):
         if not data:
             QtWidgets.QMessageBox.information(self, 'No Data', 'No data available for the selected date range.')
             return
-        self.table.setRowCount(len(data))
-        self.table.setColumnCount(9)  # Assuming 9 columns for the block names
-        headers = ['Date'] + ['AB-Block-1', 'AB-Block-2', 'Cellular-Block', 'HS-Block', 'A-Class', 'Quarantine', 'Hospital', 'Emulakath'] + ['Video', 'Audio']
+        self.table.setRowCount(len(data) + 1)  # Add one row for the grand total
+        self.table.setColumnCount(12)  # Assuming 12 columns for the block names, video, audio, and total
+        headers = ['Date', 'AB-Block-1', 'AB-Block-2', 'Cellular-Block', 'HS-Block', 'A-Class', 'Quarantine', 'Hospital', 'Emulakath', 'Video', 'Audio', 'Total']
         self.table.setHorizontalHeaderLabels(headers)
-        row = 0
-        for date, blocks_data in data.items():
-            self.table.setItem(row, 0, QtWidgets.QTableWidgetItem(date))
-            for col, block_name in enumerate(headers[1:], start=1):
+        grand_total = [0] * (len(headers) - 1)  # Initialize grand total list for each column except the first (Date)
+        video_total = 0
+        audio_total = 0
+        
+        for row, (date, blocks_data) in enumerate(data.items()):
+            self.table.setItem(gitrow, 0, QtWidgets.QTableWidgetItem(date))
+            row_total = 0
+            for col, block_name in enumerate(headers[1:9], start=1):
                 if block_name in blocks_data:
-                    self.table.setItem(row, col, QtWidgets.QTableWidgetItem(str(blocks_data[block_name])))
-            row += 1
+                    count = blocks_data[block_name]
+                    self.table.setItem(row, col, QtWidgets.QTableWidgetItem(str(count)))
+                    row_total += count
+                    grand_total[col-1] += count  # Update grand total for each block
+            self.table.setItem(row, 9, QtWidgets.QTableWidgetItem(str(blocks_data['category']['video'])))
+            self.table.setItem(row, 10, QtWidgets.QTableWidgetItem(str(blocks_data['category']['audio'])))
+            
+            # Update video and audio totals
+            video_total += blocks_data['category']['video']
+            audio_total += blocks_data['category']['audio']
+            
+            # Calculate and add the row total
+            total = row_total + blocks_data['category']['video'] + blocks_data['category']['audio']
+            self.table.setItem(row, 11, QtWidgets.QTableWidgetItem(str(total)))
+            
+        # Add grand total row at the bottom
+        grand_total_row = len(data)
+        for col, total in enumerate(grand_total):
+            self.table.setItem(grand_total_row, col+1, QtWidgets.QTableWidgetItem(str(total)))
+        
+        # Calculate and add the total of video and audio
+        total = video_total + audio_total
+        self.table.setItem(grand_total_row, 9, QtWidgets.QTableWidgetItem(str(video_total)))
+        self.table.setItem(grand_total_row, 10, QtWidgets.QTableWidgetItem(str(audio_total)))
+        self.table.setItem(grand_total_row, 11, QtWidgets.QTableWidgetItem(str(total)))
+        self.table.setItem(grand_total_row, 0, QtWidgets.QTableWidgetItem('Total'))
 
+
+  
 def main():
     app = QtWidgets.QApplication(sys.argv)
     retrieve_data_app = RetrieveDataApp()
